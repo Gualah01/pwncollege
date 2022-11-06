@@ -1,0 +1,18 @@
+//TESTO
+
+hacker@babysuid_level18:~$ /challenge/babysuid_level18 
+Welcome to /challenge/babysuid_level18!
+
+This challenge is part of a series of programs that
+force you to understand different archive formats.
+
+I just set the SUID bit on /usr/bin/bzip2.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level18) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/bzip2!
+
+//SOLUZIONE
+
+hacker@babysuid_level18:~$ bzip2 /flag
+hacker@babysuid_level18:~$ bzip2 -cd /flag.bz2 
