@@ -25,4 +25,8 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
-
+hacker@embryoio_level15:~$ nano my_script.py
+import subprocess
+subprocess.run("/challenge/embryoio_level15")
+hacker@embryoio_level15:~$ ipython
+In [1]: %run my_script.py
