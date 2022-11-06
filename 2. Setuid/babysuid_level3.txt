@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level3:~$ /challenge/babysuid_level3 
+Welcome to /challenge/babysuid_level3!
+
+This challenge is part of a series of programs that
+exposes you to very simple programs that let you directly read the flag.
+
+I just set the SUID bit on /usr/bin/less.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level3) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/less!
+
+//SOLUZIONE
+
+hacker@babysuid_level3:~$ less /flag

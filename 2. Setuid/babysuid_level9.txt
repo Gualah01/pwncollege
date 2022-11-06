@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level9:~$ /challenge/babysuid_level9 
+Welcome to /challenge/babysuid_level9!
+
+This challenge is part of a series of programs that
+shows you that an over-privileged editor is a very powerful tool, indeed.
+
+I just set the SUID bit on /usr/bin/nano.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level9) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/nano!
+
+//SOLUZIONE
+
+hacker@babysuid_level9:~$ nano /flag

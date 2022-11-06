@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level17:~$ /challenge/babysuid_level17 
+Welcome to /challenge/babysuid_level17!
+
+This challenge is part of a series of programs that
+force you to understand different archive formats.
+
+I just set the SUID bit on /usr/bin/gzip.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level17) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/gzip!
+
+//SOLUZIONE
+
+

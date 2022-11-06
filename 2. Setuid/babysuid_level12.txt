@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level12:~$ /challenge/babysuid_level12 
+Welcome to /challenge/babysuid_level12!
+
+This challenge is part of a series of programs that
+require you to understand their output to derive the flag from it.
+
+I just set the SUID bit on /usr/bin/hd.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level12) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/hd!
+
+//SOLUZIONE
+
+hacker@babysuid_level12:~$ hd /flag

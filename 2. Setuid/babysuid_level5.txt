@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level5:~$ /challenge/babysuid_level5 
+Welcome to /challenge/babysuid_level5!
+
+This challenge is part of a series of programs that
+exposes you to very simple programs that let you directly read the flag.
+
+I just set the SUID bit on /usr/bin/head.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level5) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/head!
+
+//SOLUZIONE
+
+hacker@babysuid_level5:~$ head /flag

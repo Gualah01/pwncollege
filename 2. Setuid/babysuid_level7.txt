@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level7:~$ /challenge/babysuid_level7 
+Welcome to /challenge/babysuid_level7!
+
+This challenge is part of a series of programs that
+shows you that an over-privileged editor is a very powerful tool, indeed.
+
+I just set the SUID bit on /usr/bin/vim.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level7) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/vim!
+
+//SOLUZIONE
+
+hacker@babysuid_level7:~$ vim /flag
