@@ -1,0 +1,4 @@
+//COMANDI
+nasm -felf64 script.asm -o script.o 
+objcopy -O binary --only-section=.text script.o script.a
+cat script.a | /challenge/embryoasm_level
