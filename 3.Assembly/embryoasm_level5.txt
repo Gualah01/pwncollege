@@ -1,0 +1,9 @@
+//TESTO
+
+
+
+//SOLUZIONE
+
+mov rax, rdi
+div rsi
+mov rax, rdx
