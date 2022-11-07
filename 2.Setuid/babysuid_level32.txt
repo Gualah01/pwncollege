@@ -1,0 +1,17 @@
+//TESTO
+
+hacker@babysuid_level32:~$ /challenge/babysuid_level32 
+Welcome to /challenge/babysuid_level32!
+
+This challenge is part of a series of programs that
+will enable you to read flags by making them execute other commands.
+
+I just set the SUID bit on /usr/bin/socat.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level32) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/socat!
+
+//SOLUZIONE
+
+
