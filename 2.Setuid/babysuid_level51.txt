@@ -1,6 +1,16 @@
 //TESTO
 
+hacker@babysuid_level51:~$ /challenge/babysuid_level51 
+Welcome to /challenge/babysuid_level51!
 
+This challenge is part of a series of programs that
+show you how dangerous it is to allow users to load their own code as plugins into the program (but figuring out how is the hard part!).
+
+I just set the SUID bit on /usr/bin/ssh-keygen.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level51) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/ssh-keygen!
 
 //SOLUZIONE
 

@@ -1,6 +1,16 @@
 //TESTO
 
+hacker@babysuid_level50:~$ /challenge/babysuid_level50 
+Welcome to /challenge/babysuid_level50!
 
+This challenge is part of a series of programs that
+just straight up weren't designed to let you read files.
+
+I just set the SUID bit on /usr/bin/wget.
+Try to use it to read the flag!
+
+IMPORTANT: make sure to run me (/challenge/babysuid_level50) every time that you restart
+this challenge container to make sure that I set the SUID bit on /usr/bin/wget!
 
 //SOLUZIONE
 
