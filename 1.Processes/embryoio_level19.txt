@@ -31,6 +31,7 @@ hacker@embryoio_level19:~$ nano /tmp/wqyudm
 sxbjoqcg
 hacker@embryoio_level19:~$ nano my_script.py
 import subprocess
-subprocess.run(["/challenge/embryoio_level19", "< /tmp/wqyudm"])
-
-TODO
+myinput = open('/tmp/wqyudm')
+p = subprocess.Popen('/challenge/embryoio_level19', stdin=myinput)
+hacker@embryoio_level19:~$ ipython3
+In [1]: %run my_script.py
