@@ -26,4 +26,10 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
-
+hacker@embryoio_level48:~$ nano my_script.py
+from subprocess import Popen, PIPE
+from shlex import split
+p1 = Popen(split("/challenge/embryoio_level48"), stdout=PIPE)
+p2 = Popen(split("cat"), stdin=p1.stdout)
+hacker@embryoio_level48:~$ ipython3
+In [1]: %run my_script.py
