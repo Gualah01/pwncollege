@@ -1,0 +1,25 @@
+//TESTO
+
+hacker@embryoio_level39:~$ /challenge/embryoio_level39 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : bash
+- the challenge checks for a specific process at the other end of stdout : rev
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] Checking to make sure the process is the bash shell. If this is a check for the parent process, then,
+[TEST] most likely, this is what you do by default anyways, but we'll check just in case...
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be bash.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    The shell process must be running in its default, interactive mode (/bin/bash with no commandline arguments). Your commandline arguments are: ['/usr/bin/bash', '--init-file', '/usr/lib/code-server/lib/vscode/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh']
+
+//SOLUZIONE
+
+hacker@embryoio_level39:~$ bash
+hacker@embryoio_level39:~$ /challenge/embryoio_level39 | rev | rev
