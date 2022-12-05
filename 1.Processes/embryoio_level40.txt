@@ -1,0 +1,29 @@
+//TESTO
+
+hacker@embryoio_level40:~$ /challenge/embryoio_level40 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : bash
+- the challenge checks for a specific process at the other end of stdin : cat
+- the challenge will check for a hardcoded password over stdin : hpvhikuz
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] Checking to make sure the process is the bash shell. If this is a check for the parent process, then,
+[TEST] most likely, this is what you do by default anyways, but we'll check just in case...
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be bash.
+[GOOD] You have passed the checks on the parent process!
+[TEST] You should have redirected another process to my stdin. Checking...
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    stdin of this process does not appear to be a pipe!
+
+//SOLUZIONE
+
+hacker@embryoio_level40:~$ bash
+hacker@embryoio_level40:~$ cat | /challenge/embryoio_level40
+hpvhikuz
