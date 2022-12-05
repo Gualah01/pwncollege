@@ -1,0 +1,29 @@
+//TESTO
+
+hacker@embryoio_level48:~$ /challenge/embryoio_level48 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : ipython
+- the challenge checks for a specific process at the other end of stdout : cat
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] We will now check that that the process is an interactive ipython instance.
+
+[INFO] Since ipython runs as a script inside python, this will check a few things:
+[INFO] 1. That the process itself is python.
+[INFO] 2. That the module being run in python is ipython.
+[INFO] If the process being checked is just a normal 'ipython', you'll be okay!
+
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be python3.8.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    Executable must be 'python'. Yours is: bash
+
+//SOLUZIONE
+
+
