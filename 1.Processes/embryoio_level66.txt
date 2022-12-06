@@ -1,0 +1,21 @@
+//TESTO
+
+hacker@embryoio_level66:~$ /challenge/embryoio_level66 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : find
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be find.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    Executable must be 'find'. Yours is: bash
+
+//SOLUZIONE
+
+hacker@embryoio_level66:~$ find /challenge/embryoio_level66  -exec {} \;
