@@ -33,4 +33,25 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
-//TODO
+hacker@embryoio_level60:~$ nano my_script.c
+#include<stdio.h>
+#include<stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+void pwncollege(){
+   pid_t const pid1 = fork();
+   if(pid1==0){
+      char* arr[] = {"", NULL};
+      execv("/challenge/embryoio_level60", arr);
+   }
+   else{
+     wait(NULL);
+   }
+}
+
+int main (int argc, char* argv[]){
+    pwncollege();
+}
+hacker@embryoio_level60:~$ gcc my_script.c
+hacker@embryoio_level60:~$ ./a.out | cat
