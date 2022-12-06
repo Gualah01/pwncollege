@@ -19,5 +19,5 @@ ONWARDS TO GREATNESS!
 
 hacker@embryoio_level68:~$ nano my_script.sh
 #! /bin/bash
-/challenge/embryoio_level68 `printf ' defqwqwwdc%0.s' {0..171}`
+/challenge/embryoio_level68 `printf ' defqwqwwdc%0.s' {1..172}`
 hacker@embryoio_level68:~$ bash my_script.sh
