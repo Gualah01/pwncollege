@@ -19,10 +19,10 @@ ONWARDS TO GREATNESS!
 //SOLUZIONE
 
 hacker@embryoio_level72:~$ nano my_script.sh
+#! /bin/bash
+/challenge/embryoio_level72
 hacker@embryoio_level72:~$ mkdir /tmp/qcwwdx
 hacker@embryoio_level72:~$ cd /tmp/qcwwdx/
 hacker@embryoio_level72:/tmp/qcwwdx$ touch ojxomn
 hacker@embryoio_level72:/tmp/qcwwdx$ cp /home/hacker/my_script.sh ./
-hacker@embryoio_level72:/tmp/qcwwdx$ bash my_script.sh 
-
-//TODO
+hacker@embryoio_level72:/tmp/qcwwdx$ bash my_script.sh < ojxomn
