@@ -1,0 +1,46 @@
+//TESTO
+
+hacker@embryoasm_level9:~$ /challenge/embryoasm_level9 
+
+Welcome to EmbryoASMLevel9
+==================================================
+
+To interact with any level you will send raw bytes over stdin to this program.
+To efficiently solve these problems, first run it once to see what you need
+then craft, assemble, and pipe your bytes to this program.
+
+In this level you will be working with registers. You will be asked to modify
+or read from registers_use.
+
+We will now set some values in memory dynamically before each run. On each run
+the values will change. This means you will need to do some type of formulaic
+operation with registers_use. We will tell you which registers_use are set beforehand
+and where you should put the result. In most cases, its rax.
+
+In this level you will be working with bit logic and operations. This will involve heavy use of
+directly interacting with bits stored in a register or memory location. You will also likely
+need to make use of the logic instructions in x86: and, or, not, xor.
+
+
+
+Using only the following instructions:
+and, or, xor
+Implement the following logic:
+
+if x is even then
+  y = 1
+else
+  y = 0
+where:
+x = rdi
+y = rax
+
+We will now set the following in preparation for your code:
+rdi = 0x14970f79
+
+//SOLUZIONE
+
+and rdi,1
+xor rdi,1
+xor rax,rax
+or rax,rdi
