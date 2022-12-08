@@ -1,0 +1,82 @@
+//TESTO
+
+hacker@embryoasm_level19:~$ /challenge/embryoasm_level19 
+
+Welcome to EmbryoASMLevel19
+==================================================
+
+To interact with any level you will send raw bytes over stdin to this program.
+To efficiently solve these problems, first run it once to see what you need
+then craft, assemble, and pipe your bytes to this program.
+
+In this level you will be working with control flow manipulation. This involves using instructions
+to both indirectly and directly control the special register `rip`, the instruction pointer.
+You will use instructions like: jmp, call, cmp, and the like to implement requests behavior.
+
+We will be testing your code multiple times in this level with dynamic values! This means we will
+be running your code in a variety of random ways to verify that the logic is robust enough to
+survive normal use. You can consider this as normal dynamic value se
+
+
+
+The last set of jump types is the indirect jump, which is often used for switch statements in the
+real world. Switch statements are a special case of if-statements that use only numbers to
+determine where the control flow will go. Here is an example:
+switch(number):
+    0: jmp do_thing_0
+    1: jmp do_thing_1
+    2: jmp do_thing_2
+    default: jmp do_default_thing
+The switch in this example is working on `number`, which can either be 0, 1, or 2. In the case that
+`number` is not one of those numbers, default triggers. You can consider this a reduced else-if
+type structure.
+In x86, you are already used to using numbers, so it should be no suprise that you can make if
+statements based on something being an exact number. In addition, if you know the range of the numbers,
+a switch statement works very well. Take for instance the existence of a jump table. A jump table
+is a contiguous section of memory that holds addresses of places to jump. In the above example, the
+jump table could look like:
+[0x1337] = address of do_thing_0
+[0x1337+0x8] = address of do_thing_1
+[0x1337+0x10] = address of do_thing_2
+[0x1337+0x18] = address of do_default_thing
+Using the jump table, we can greatly reduce the amount of cmps we use. Now all we need to check
+is if `number` is greater than 2. If it is, always do:
+jmp [0x1337+0x18]
+Otherwise:
+jmp [jump_table_address + number * 8]
+Using the above knowledge, implement the following logic:
+if rdi is 0:
+    jmp 0x403038
+else if rdi is 1:
+    jmp 0x4030e4
+else if rdi is 2:
+    jmp 0x403198
+else if rdi is 3:
+    jmp 0x4032b0
+else:
+    jmp 0x40335d
+Please do the above with the following constraints:
+- assume rdi will NOT be negative
+- use no more than 1 cmp instruction
+- use no more than 3 jumps (of any variant)
+- we will provide you with the number to 'switch' on in rdi.
+- we will provide you with a jump table base address in rsi.
+
+Here is an example table:
+    [0x40408a] = 0x403038 (addrs will change)
+    [0x404092] = 0x4030e4
+    [0x40409a] = 0x403198
+    [0x4040a2] = 0x4032b0
+    [0x4040aa] = 0x40335d
+
+//SOLUZIONE
+
+mov rax,rdi
+and rax,0xfffffffffffffffc
+je nomal
+nop
+jmp [rsi+32]
+nop
+nomal:
+jmp [rsi+rdi*8]
+nop
