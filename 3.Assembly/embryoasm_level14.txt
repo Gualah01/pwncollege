@@ -1,0 +1,47 @@
+//TESTO
+
+hacker@embryoasm_level14:~$ /challenge/embryoasm_level14 
+
+Welcome to EmbryoASMLevel14
+==================================================
+
+To interact with any level you will send raw bytes over stdin to this program.
+To efficiently solve these problems, first run it once to see what you need
+then craft, assemble, and pipe your bytes to this program.
+
+We will now set some values in memory dynamically before each run. On each run
+the values will change. This means you will need to do some type of formulaic
+operation with registers_use. We will tell you which registers_use are set beforehand
+and where you should put the result. In most cases, its rax.
+
+In this level you will be working with the Stack, the memory region that dynamically expands
+and shrinks. You will be required to read and write to the Stack, which may require you to use
+the pop & push instructions. You may also need to utilize rsp to know where the stack is pointing.
+
+
+
+In these levels we are going to introduce the stack.
+The stack is a region of memory, that can store values for later.
+To store a value a on the stack we use the push instruction, and to retrieve a value we use pop.
+The stack is a last in first out (LIFO) memory structure this means
+the last value pushed in the first value popped.
+Imagine unloading plates from the dishwasher let's say there are 1 red, 1 green, and 1 blue.
+First we place the red one in the cabinet, then the green on top of the red, then the blue.
+Out stack of plates would look like:
+Top ----> Blue
+          Green
+Bottom -> Red
+Now if wanted a plate to make a sandwhich we would retrive the top plate from the stack
+which would be the blue one that was last into the cabinet, ergo the first one out.
+
+Subtract rdi from the top value on the stack.
+
+We will now set the following in preparation for your code:
+rdi = 0x118fd
+(stack) [0x7fffff1ffff8] = 0x18c0ee1c
+
+//SOLUZIONE
+
+pop rax
+sub rax,rdi
+push rax
