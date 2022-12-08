@@ -1,0 +1,21 @@
+//TESTO
+
+hacker@embryoio_level73:~$ /challenge/embryoio_level73 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : shellscript
+- the challenge will check that it is running in a specific current working directory : /tmp/yppaqz
+- the challenge will check to make sure that the parent's parent CWD to be different than the challenge's CWD
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] Checking to make sure the process is a non-interactive shell script.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    The shell process must be executing a shell script that you wrote like this: `bash my_script.sh`
+
+//SOLUZIONE
+
+TODO
