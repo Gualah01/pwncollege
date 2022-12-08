@@ -1,0 +1,50 @@
+//TESTO
+
+hacker@embryoasm_level12:~$ /challenge/embryoasm_level12 
+
+Welcome to EmbryoASMLevel12
+==================================================
+
+To interact with any level you will send raw bytes over stdin to this program.
+To efficiently solve these problems, first run it once to see what you need
+then craft, assemble, and pipe your bytes to this program.
+
+We will now set some values in memory dynamically before each run. On each run
+the values will change. This means you will need to do some type of formulaic
+operation with registers_use. We will tell you which registers_use are set beforehand
+and where you should put the result. In most cases, its rax.
+
+In this level you will be working with memory. This will require you to read or write
+to things stored linearly in memory. If you are confused, go look at the linear
+addressing module in 'ike. You may also be asked to dereference things, possibly multiple
+times, to things we dynamically put in memory for your use.
+
+
+
+It is worth noting, as you may have noticed, that values are stored in reverse order of how we
+represent them. As an example, say:
+[0x1330] = 0x00000000deadc0de
+If you examined how it actually looked in memory, you would see:
+[0x1330] = 0xde 0xc0 0xad 0xde 0x00 0x00 0x00 0x00
+This format of storing things in 'reverse' is intentional in x86, and its called Little Endian.
+
+For this challenge we will give you two addresses created dynamically each run. The first address
+will be placed in rdi. The second will be placed in rsi.
+Using the earlier mentioned info, perform the following:
+1. set [rdi] = 0xdeadbeef00001337
+2. set [rsi] = 0xc0ffee0000
+Hint: it may require some tricks to assign a big constant to a dereferenced register. Try setting
+a register to the constant than assigning that register to the derefed register.
+
+We will now set the following in preparation for your code:
+[0x4042c8] = 0xffffffffffffffff
+[0x404f80] = 0xffffffffffffffff
+rdi = 0x4042c8
+rsi = 0x404f80
+
+//SOLUZIONE
+
+mov rax,0xDEADBEEF00001337
+mov [rdi],rax
+mov rbx,0x000000C0FFEE0000
+mov [rsi],rbx
