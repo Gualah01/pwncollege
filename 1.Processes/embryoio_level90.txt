@@ -1,9 +1,10 @@
 //TESTO
 
-hacker@embryoio_level89:~$ /challenge/embryoio_level89 
+hacker@embryoio_level90:~$ /challenge/embryoio_level90 
 WELCOME! This challenge makes the following asks of you:
 - the challenge checks for a specific parent process : shellscript
-- the challenge will check that argv[NUM] holds value VALUE (listed to the right as NUM:VALUE) : 0:dvbyqd
+- the challenge will make sure that stdin is redirected from a fifo
+- the challenge will check for a hardcoded password over stdin : vdkohxym
 
 ONWARDS TO GREATNESS!
 
