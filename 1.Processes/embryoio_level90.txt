@@ -21,6 +21,6 @@ ONWARDS TO GREATNESS!
 hacker@embryoio_level90:~$ nano my_script.sh
 #!bin/bash
 mkfifo test
-echo '/challenge/embryoio_level* < test' > script.sh
-echo vdkohxym > test | bash script.sh
+echo '/challenge/embryoio_level* < test' > my_script.sh
+echo vdkohxym > test | bash my_script.sh
 hacker@embryoio_level90:~$ bash my_script.sh
