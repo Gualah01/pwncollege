@@ -54,4 +54,12 @@ We will now set the following in preparation for your code:
 
 //SOLUZIONE
 
-
+_start:
+    jmp next
+    %rep 0x51
+        nop
+    %endrep
+next:
+    mov rdi,[rsp]
+    mov r12,0x403000
+    jmp r12
