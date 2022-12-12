@@ -1,0 +1,30 @@
+//TESTO
+
+hacker@embryoio_level99:~$ /challenge/embryoio_level99 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : python
+- the challenge will force the parent process to solve a number of arithmetic problems : 1
+- the challenge will use the following arithmetic operations in its arithmetic problems : +*
+- the complexity (in terms of nested expressions) of the arithmetic problems : 1
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] We will now check that that the process is a non-interactive python instance (i.e., an executing python script).
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be python3.8.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    Executable must be 'python'. Yours is: bash
+
+//SOLUZIONE
+
+hacker@embryoio_level99:~$ nano my_script.py 
+import subprocess
+subprocess.run(["/challenge/embryoio_level99"])
+hacker@embryoio_level99:~$ python my_script.py
+[TEST] CHALLENGE! Please send the solution for: X
+X
