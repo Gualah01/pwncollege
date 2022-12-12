@@ -1,0 +1,38 @@
+//TESTO
+
+hacker@embryoio_level100:~$ /challenge/embryoio_level100 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : python
+- the challenge will force the parent process to solve a number of arithmetic problems : 5
+- the challenge will use the following arithmetic operations in its arithmetic problems : +*%
+- the complexity (in terms of nested expressions) of the arithmetic problems : 3
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] We will now check that that the process is a non-interactive python instance (i.e., an executing python script).
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be python3.8.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    Executable must be 'python'. Yours is: bash
+
+//SOLUZIONE
+
+//Primo Terminale
+hacker@embryoio_level100:~$ nano my_script.py
+import subprocess
+subprocess.run(["/challenge/embryoio_level100"])
+hacker@embryoio_level100:~$ python my_script.py
+[TEST] CHALLENGE! Please send the solution for: (3439%2827) % (1913%2886)
+
+//Secondo Terminale
+hacker@embryoio_level100:~$ ipython
+In [1]: (3439%2827) % (1913%2886)
+Out[1]: 612
+
+//Primo Terminale
+612
