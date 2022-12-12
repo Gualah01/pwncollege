@@ -15,6 +15,7 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
+//Primo Terminale
 hacker@embryoio_level107:~$ mkfifo qin
 hacker@embryoio_level107:~$ nano my_script.py
 import subprocess
