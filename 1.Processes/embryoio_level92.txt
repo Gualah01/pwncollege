@@ -1,9 +1,11 @@
 //TESTO
 
-hacker@embryoio_level91:~$ /challenge/embryoio_level91 
+hacker@embryoio_level92:~$ /challenge/embryoio_level92 
 WELCOME! This challenge makes the following asks of you:
 - the challenge checks for a specific parent process : shellscript
+- the challenge will make sure that stdin is redirected from a fifo
 - the challenge will make sure that stdout is a redirected from fifo
+- the challenge will check for a hardcoded password over stdin : svmjoumz
 
 ONWARDS TO GREATNESS!
 
@@ -17,11 +19,4 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
-hacker@embryoio_level91:~$ nano my_script.sh
-#!/bin/bash
-/challenge/embryoio_level91 > queue
-hacker@embryoio_level91:~$ mkfifo queue
-hacker@embryoio_level91:~$ bash my_script.sh
 
-//NUOVO TERMINALE
-hacker@embryoio_level91:~$ cat f1
