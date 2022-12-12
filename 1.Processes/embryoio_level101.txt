@@ -20,6 +20,8 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
+ln -s /challenge/embryoio_level101 /tmp/iflwdq
+export PATH=.:$PATH
 hacker@embryoio_level101:~$ nano my_script.py
 import subprocess
 subprocess.run(["/tmp/iflwdq"])
