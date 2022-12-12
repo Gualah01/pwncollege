@@ -1,0 +1,30 @@
+//TESTO
+
+hacker@embryoio_level107:~$ /challenge/embryoio_level107 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : python
+- the challenge will take input on a specific file descriptor : 242
+- the challenge will check for a hardcoded password over stdin : bezmucpk
+
+ONWARDS TO GREATNESS!
+
+[TEST] This challenge takes input over file descriptor 242! Make sure to provide this file descriptor to the program, and send any required input over it.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    It looks like there is no file descriptor 242 passed in to this process.
+
+//SOLUZIONE
+
+hacker@embryoio_level107:~$ mkfifo qin
+hacker@embryoio_level107:~$ nano my_script.py
+import subprocess
+import os
+f=open("./t1")
+f2=os.dup2(f.fileno(),242)
+argv=["/challenge/embryoio_level107"]
+p=subprocess.Popen(argv,pass_fds=[242])
+p.wait()
+hacker@embryoio_level107:~$ python my_script.py & cat > qin
+
+//Secondo Terminale
+hacker@embryoio_level107:~$ echo bezmucpk > qin
