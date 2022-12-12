@@ -18,5 +18,6 @@ ONWARDS TO GREATNESS!
 hacker@embryoio_level94:~$ nano my_script.sh
 #!/bin/bash
 (exec 70<qin; /challenge/embryoio_level94)
+hacker@embryoio_level94:~$ mkfifo qin
 hacker@embryoio_level94:~$ bash my_script.sh & cat > qin
 wvrrmdmh
