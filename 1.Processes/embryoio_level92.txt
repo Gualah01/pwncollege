@@ -19,4 +19,12 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
+hacker@embryoio_level92:~$ nano my_script.sh
+#!/bin/bash
+/challenge/embryoio_level92 < qin > qout
+hacker@embryoio_level92:~$ mkfifo qin
+hacker@embryoio_level92:~$ mkfifo qout
+hacker@embryoio_level92:~$ cat < qout
 
+//NUOVO TERMINALE
+hacker@embryoio_level92:~$ echo svmjoumz > qin | bash my_script.sh
