@@ -1,0 +1,19 @@
+//TESTO
+
+hacker@embryoio_level120:~$ /challenge/embryoio_level120 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : binary
+- the challenge will take input on a specific file descriptor : 126
+- the challenge will check for a hardcoded password over stdin : jptvcddo
+
+ONWARDS TO GREATNESS!
+
+[TEST] This challenge takes input over file descriptor 126! Make sure to provide this file descriptor to the program, and send any required input over it.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    It looks like there is no file descriptor 126 passed in to this process.
+
+//SOLUZIONE
+
+hacker@embryoio_level120:~$ exec 126>>"jptvcddo"
+hacker@embryoio_level120:~$ ./a.out <&126
