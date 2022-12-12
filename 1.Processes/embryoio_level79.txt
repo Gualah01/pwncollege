@@ -1,0 +1,28 @@
+//TESTO
+
+hacker@embryoio_level79:~$ /challenge/embryoio_level79 
+WELCOME! This challenge makes the following asks of you:
+- the challenge checks for a specific parent process : python
+- the challenge will check that it is running in a specific current working directory : /tmp/fxyjmt
+- the challenge will check to make sure that the parent's parent CWD to be different than the challenge's CWD
+
+ONWARDS TO GREATNESS!
+
+[INFO] This challenge will now perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the flag.
+[TEST] Performing checks on the parent process of this process.
+[TEST] We will now check that that the process is a non-interactive python instance (i.e., an executing python script).
+[INFO] The process' executable is /usr/bin/bash.
+[INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
+[INFO] To pass the checks, the executable must be python3.8.
+[FAIL] You did not satisfy all the execution requirements.
+[FAIL] Specifically, you must fix the following issue:
+[FAIL]    Executable must be 'python'. Yours is: bash
+
+//SOLUZIONE
+
+hacker@embryoio_level79:~$ nano my_script.py 
+import subprocess
+subprocess.run(["/challenge/embryoio_level79"],cwd = "/tmp/fxyjmt")
+hacker@embryoio_level79:~$ mkdir /tmp/fxyjmt
+hacker@embryoio_level79:~$ python my_script.py 
