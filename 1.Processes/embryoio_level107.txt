@@ -19,7 +19,7 @@ hacker@embryoio_level107:~$ mkfifo qin
 hacker@embryoio_level107:~$ nano my_script.py
 import subprocess
 import os
-f=open("./t1")
+f=open("./qin")
 f2=os.dup2(f.fileno(),242)
 argv=["/challenge/embryoio_level107"]
 p=subprocess.Popen(argv,pass_fds=[242])
