@@ -53,4 +53,5 @@ rdi = 0x914e7ba0c6aafae0
 
 //SOLUZIONE
 
-
+shr rdi,32
+mov al,dil
