@@ -23,4 +23,14 @@ ONWARDS TO GREATNESS!
 
 //SOLUZIONE
 
-TODO
+hacker@embryoio_level109:~$ nano my_script.py
+import subprocess
+import os
+f=open("./qin")
+f2=os.dup2(f.fileno(),0)
+argv=["/challenge/embryoio_level109"]
+p=subprocess.Popen(argv,pass_fds=[1], close_fds=False)
+p.wait()
+hacker@embryoio_level109:~$ 0>&1-
+hacker@embryoio_level109:~$ python my_script.py
+thgnlyxm
