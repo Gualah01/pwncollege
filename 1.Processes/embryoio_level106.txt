@@ -30,6 +30,7 @@ hacker@embryoio_level106:~$ mkfifo qout
 hacker@embryoio_level106:~$ nano my_script.py
 import subprocess
 subprocess.run(["/challenge/embryoio_level106"])
+hacker@embryoio_level106:~$ python my_script.py < qin > qout
 
 //Secondo Terminale
 hacker@embryoio_level106:~$ cat > qin

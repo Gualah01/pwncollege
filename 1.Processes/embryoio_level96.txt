@@ -22,6 +22,6 @@ ONWARDS TO GREATNESS!
 
 hacker@embryoio_level96:~$ nano my_script.sh
 #!/bin/bash
-(exec 1<qin; /challenge/embryoio_level96)
-
-TODO
+/challenge/embryoio_level96
+hacker@embryoio_level96:~$ bash my_script.sh
+lldfrgvh
